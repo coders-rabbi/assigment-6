@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Universal API</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4fbe9ee6c.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="container">
+    <!-- Header Section -->
+    <header>
+        <div class="text-center mt-5">
+            <h1 class="fw-bold">AI Universe Hub</h1>
+            <button id="sort-by-date" class="btn btn-danger py-2 fw-semibold mt-3">sort by date</button>
+        </div>
+    </header>
+    <!-- Header Section -->
+    <main>
+        <!-- Main Section start -->
+        <section class="">
+            <!-- All API Card Section Start -->
+            <div id="hub-container" class="row row-cols-1 row-cols-md-3 g-4 mt-5 mb-5">
+
+            </div>
+            <!-- All API card section end -->
+
+            <!-- Show All Button -->
+            <div id="show-all" class="text-center d-none">
+                <button id="btn-show-all" class="btn btn-danger px-4 fs-5 fw-semibold mt-4 mb-5">Show All</button>
+            </div>
+            <!-- Show All Button  section End-->
+        </section>
+
+        <!-- Spinner Section start-->
+        <section id="loader" style="display: none;">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-white" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        <!-- Spinner Section end-->
+
+        <section>
+            <!-- Modal boday-->
+            <div class="modal fade" id="apimodal" tabindex="-1" aria-labelledby="apimodalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="api-Modal-Title"></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-md-flex gap-5">
+                            <div class="row col-md-6 border border-danger rounded-2 bg-danger-subtle p-4">
+                                <div>
+                                    <p id="modal-description"></p>
+                                </div>
+                                <div class="d-md-flex gap-2">
+                                    <div id="basic" class="col-md-4 bg-white rounded-2 text-center p-4 text-primary">
+
+                                    </div>
+                                    <div id="pro" class="col-md-4 bg-white rounded-2 text-center p-4 text-danger">
+
+                                    </div>
+                                    <div id="enterprise"
+                                        class="col-md-4 bg-white rounded-2 text-center p-4 text-bg-info">
+
+                                    </div>
+                                </div>
+                                <div class="row d-flex">
+                                    <div id="modal-details" class="col-md-6 mt-3">
+
+                                    </div>
+                                    <div id="modal-integrations" class="col-md-6 mt-3">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modal-second-colum" class="row col-md-6 border border-light-subtle rounded-2 p-4">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- js file -->
+    <script src="bootstrap/bootstrap.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
